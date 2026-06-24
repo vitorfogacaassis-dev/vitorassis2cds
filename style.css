@@ -98,3 +98,21 @@ color: #ffffff;
 text-decoration: none;
 }
 
+.banner-video {
+  display: flex;
+  justify-content: flex-end; /* Empurra o vídeo para a direita */
+  align-items: center;       /* Centraliza verticalmente */
+  width: 100%;
+  background-color: #000;    /* Opcional: fundo preto para destacar o vídeo */
+}
+
+/* Seleciona o vídeo que está dentro do banner */
+.banner-video video {
+  width: 40%;                /* Define a largura do vídeo (ajuste como quiser) */
+  height: auto;              /* Mantém a proporção do vídeo sem distorcer */
+}
+
+.video {
+  width: 200;
+  height: auto;
+}
