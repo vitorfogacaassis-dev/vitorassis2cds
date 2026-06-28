@@ -5,15 +5,10 @@ box-sizing: border-box;
 }
 body{
 font-family: "Poppins", sans-serif;
-background-color: rgb(238, 234, 234);
 }
-
-
-
-
 header{
-background-color: #eaea1e;
-color: rgb(15, 15, 15);
+background-color: #424e61;
+color: white;
 width: 100%;
 padding: 20px;
 }
@@ -55,7 +50,7 @@ text-align: center;
 text-align: center;
 }
 .estudante-imagem{
-width: 150px;
+width: 120px;
 }
 .estudante-icone{
 width: 38px;
@@ -75,8 +70,8 @@ display: flex;
 justify-content: space-around;
 }
 .escola{
-background-image: linear-gradient(#0a0a0a,#030303);
-color: rgb(7, 7, 7);
+background-image: linear-gradient(#40A2E3,#7FC2EF);
+color: white;
 display: flex;
 justify-content:center;
 padding: 24px 0;
@@ -96,23 +91,4 @@ padding: 12px 0;
 .link{
 color: #ffffff;
 text-decoration: none;
-}
-
-.banner-video {
-  display: flex;
-  justify-content: flex-end; /* Empurra o vídeo para a direita */
-  align-items: center;       /* Centraliza verticalmente */
-  width: 100%;
-  background-color: #000;    /* Opcional: fundo preto para destacar o vídeo */
-}
-
-/* Seleciona o vídeo que está dentro do banner */
-.banner-video video {
-  width: 40%;                /* Define a largura do vídeo (ajuste como quiser) */
-  height: auto;              /* Mantém a proporção do vídeo sem distorcer */
-}
-
-.video {
-  width: 150;
-  height: auto;
 }
