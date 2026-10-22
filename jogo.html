@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MEU SITE |VITOR DAVI FOGAÇA DE ASSIS</title>
+<title>MEU jogoTOR DAVI FOGAÇA DE ASSIS</title>
 <link rel="stylesheet" href="style.css">
-<LINK REL="ICON" href="CHAD.jpg">
+<link rel="stylesheet" href="jogo.css">
 </head>
 <body>
 <!--header é a parte do cabeçalho do site, é o topo da página-->
@@ -21,6 +21,92 @@ Página">
   <li><a href="index.html">Pagina pessoal</a></li>
   <li><a href="jogo.html">meu jogo</a></li>
 </ul>
+
+<main id="main-content">
+        <div id="game-section">
+            <div id="game-container">
+                <div id="start-menu">
+                    <h1>PLANTS VS ZOMBIES</h1>
+                    <p>Defenda seu gramado contra as hordas de zumbis!</p>
+                    <!DOCTYPE html>
+<button id="start-game-btn">INICIAR JOGO ▶</button>
+                </div>
+
+                <div id="top-bar">
+                    <div id="sun-counter">
+                        <span class="sun-icon">☀️</span>
+                        <span id="sun-count">150</span>
+                    </div>
+
+                    <div id="seed-bank">
+                        <div class="seed-card" data-plant="sunflower" data-cost="50">
+                            <span class="slot-num">1</span>
+                            <span class="card-icon">🌻</span>
+                            <span class="card-cost">50</span>
+                        </div>
+                        <div class="seed-card" data-plant="peashooter" data-cost="100">
+                            <span class="slot-num">2</span>
+                            <img src="pea.png" class="card-img" alt="Pea">
+                            <span class="card-cost">100</span>
+                        </div>
+                        <div class="seed-card" data-plant="snowpea" data-cost="150">
+                            <span class="slot-num">3</span>
+                            <span class="card-icon">🥶</span>
+                            <span class="card-cost">150</span>
+                        </div>
+                        <div class="seed-card" data-plant="repeater" data-cost="200">
+                            <span class="slot-num">4</span>
+                            <span class="card-icon">🔥</span>
+                            <span class="card-cost">200</span>
+                        </div>
+                        <div class="seed-card" data-plant="wallnut" data-cost="50">
+                            <span class="slot-num">5</span>
+                            <span class="card-icon">🥜</span>
+                            <span class="card-cost">50</span>
+                        </div>
+                        <div class="seed-card" data-plant="cherrybomb" data-cost="150">
+                            <span class="slot-num">6</span>
+                            <span class="card-icon">🍒</span>
+                            <span class="card-cost">150</span>
+                        </div>
+                        <div class="shovel-card" id="shovel-btn">
+                            <span class="card-icon">⛏️</span>
+                            <span class="card-label">PÁ</span>
+                        </div>
+                    </div>
+
+                    <div id="score-board">
+                        <div class="info-group">
+                            <span class="info-title">PONTOS</span>
+                            <span id="score-count">0</span>
+                        </div>
+                        <div class="info-group">
+                            <span class="info-title">ONDA</span>
+                            <span id="wave-count">1</span>
+                        </div>
+                    </div>
+
+                    <div id="hud-controls">
+                        <button id="restart-btn" title="Reiniciar">🔄</button>
+                        <button id="fullscreen-btn" title="Tela Cheia">⛶</button>
+                    </div>
+                </div>
+
+                <div id="lawn-wrapper">
+                    <div id="mower-lane">
+                        <div class="mower">🚜</div>
+                        <div class="mower">🚜</div>
+                        <div class="mower">🚜</div>
+                        <div class="mower">🚜</div>
+                        <div class="mower">🚜</div>
+                    </div>
+                    <div id="lawn-grid"></div>
+                </div>
+
+                <div id="message-banner">Plante Girassóis para gerar mais sol!</div>
+            </div>
+        </div>
+    </main>
 
 <footer class="escola">
 <img class="logo_rodape" src="CHAD.jpg" alt="Logo da Escola">

@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
+#game-container {
+    width: 960px;
+    height: 600px;
+    background-color: #2b1d0c;
+    border: 5px solid #1c1106;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0,0,0,0.9);
+    overflow: hidden;
+    user-select: none;
+}
+
+#game-container:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+}
+
+#start-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.88);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: white;
+    gap: 20px;
+}
+
+#start-menu h1 {
+    font-size: 48px;
+    color: #4CAF50;
+    text-shadow: 3px 3px #000;
+}
+
+#start-menu p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+#start-game-btn {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 15px 35px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+#start-game-btn:hover {
+    background-color: #e6b800;
+    transform: scale(1.08);
+}
+
+#top-bar {
+    height: 85px;
+    background: #6e4a27;
+    border-bottom: 4px solid #3d2814;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    z-index: 20;
+}
+
+#sun-counter {
+    background: #fff8d6;
+    border: 3px solid #b8860b;
+    border-radius: 10px;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #333;
+    min-width: 95px;
+}
+
+.sun-icon {
+    font-size: 26px;
+}
+
+#seed-bank {
+    display: flex;
+    gap: 6px;
+    background: #422d17;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid #281a0c;
+}
+
+.seed-card, .shovel-card {
+    width: 58px;
+    height: 68px;
+    background: #fff8e7;
+    border: 2px solid #8b5a2b;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.seed-card:hover, .shovel-card:hover {
+    border-color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+.seed-card.selected, .shovel-card.selected {
+    border: 3px solid #ffcc00;
+    box-shadow: 0 0 8px #ffcc00;
+    background: #fff3c4;
+}
+
+.slot-num {
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #555;
+}
+
+.card-icon {
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+.card-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    margin-top: 12px;
+}
+
+.card-cost {
+    background: #c0392b;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 4px 4px;
+}
+
+.shovel-card {
+    background: #e8d5b7;
+}
+
+.card-label {
+    font-size: 10px;
+    font-weight: bold;
+    color: #444;
+}
+
+#score-board {
+    display: flex;
+    gap: 15px;
+    background: #422d17;
+    padding: 6px 15px;
+    border-radius: 8px;
+    color: #ffcc00;
+    border: 2px solid #281a0c;
+}
+
+.info-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-title {
+    font-size: 10px;
+    color: #d2b48c;
+    font-weight: bold;
+}
+
+.info-group span:last-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#hud-controls {
+    display: flex;
+    gap: 6px;
+}
+
+#hud-controls button {
+    background: #e67e22;
+    border: 2px solid #d35400;
+    color: white;
+    font-size: 18px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#hud-controls button:hover {
+    background: #d35400;
+}
+
+#lawn-wrapper {
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+
+#mower-lane {
+    width: 50px;
+    background: #8b5a2b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: 3px solid #5c3a1a;
+}
+
+.mower {
+    font-size: 26px;
+}
+
+#lawn-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 32px;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.cell.type-a {
+    background-color: #55b938;
+}
+
+.cell.type-b {
+    background-color: #4caf50;
+}
+
+.cell:hover {
+    filter: brightness(1.1);
+}
+
+.plant-img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+#message-banner {
+    height: 28px;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    z-index: 10;
+}
+
+.sun-drop {
+    position: absolute;
+    font-size: 36px;
+    cursor: pointer;
+    z-index: 50;
+    animation: float 2s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-6px); }
+}
+
+#footer-section {
+    background-color: #1e73be;
+    color: white;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-block {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-block h3 {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.footer-block p {
+    line-height: 1.6;
+    font-size: 14px;
+}
