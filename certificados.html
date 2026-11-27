@@ -21,3 +21,161 @@ Página">
   <li><a href="index.html">Pagina pessoal</a></li>
   <li><a href="jogo.html">meu jogo</a></li>
 </ul>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Certificados</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .secao-certificados {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .secao-certificados h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .descricao {
+            margin-bottom: 40px;
+        }
+
+        .lista-certificados {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card-certificado {
+            padding: 25px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .card-certificado:hover {
+            transform: translateY(-7px);
+        }
+
+        .icone {
+            font-size: 40px;
+        }
+
+        .card-certificado h2 {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .card-certificado p {
+            color: #666;
+        }
+
+        .botao-certificado {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            background: #702cf5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .botao-certificado:hover {
+            background: #4d16b5;
+        }
+
+        .voltar {
+            display: inline-block;
+            margin-top: 40px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="secao-certificados">
+
+    <h1>🎓 Meus Certificados</h1>
+
+    <p class="descricao">
+        Cada certificado representa mais um passo
+        na minha jornada de aprendizado!
+    </p>
+
+    <div class="lista-certificados">
+
+        <article class="card-certificado">
+            <div class="icone">🌐</div>
+
+            <h2>HTTP: Entendendo a web por baixo dos panos</h2>
+
+            <p>Curso de fundamentos da web e protocolo HTTP.</p>
+
+            <p><strong>Carga horária:</strong> 14 horas</p>
+
+            <a class="botao-certificado"
+               href="https://cursos.alura.com.br/certificate/vitor-fogaca-assis/http-fundamentos"
+               target="_blank"
+               rel="noopener noreferrer">
+               Ver certificado ↗
+            </a>
+        </article>
+
+        <article class="card-certificado">
+            <div class="icone">💻</div>
+
+            <h2>HTML5 e CSS3 parte 1</h2>
+
+            <p>Crie uma página da Web e aprenda os fundamentos de HTML e CSS.</p>
+
+            <p><strong>Carga horária:</strong> 8 horas</p>
+
+            <a class="botao-certificado"
+               href="https://cursos.alura.com.br/certificate/vitor-fogaca-assis/html5-css3-primeiros-passos"
+               target="_blank"
+               rel="noopener noreferrer">
+               Ver certificado ↗
+            </a>
+        </article>
+
+        <article class="card-certificado">
+            <div class="icone">🎨</div>
+
+            <h2>HTML5 e CSS3 parte 2</h2>
+
+            <p>Aprenda posicionamento, listas e navegação.</p>
+
+            <p><strong>Carga horária:</strong> 8 horas</p>
+
+            <a class="botao-certificado"
+               href="https://cursos.alura.com.br/certificate/vitor-fogaca-assis/html5-css3-posicionamento-listas-navegacao"
+               target="_blank"
+               rel="noopener noreferrer">
+               Ver certificado ↗
+            </a>
+        </article>
+
+    </div>
+
+    <a href="index.html" class="voltar">
+        ← Voltar para página inicial
+    </a>
+
+</section>
+
+</body>
+</html>
